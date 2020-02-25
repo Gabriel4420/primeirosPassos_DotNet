@@ -63,6 +63,9 @@ namespace SistemaEscolaDIO
                     case "4":
                         //Saindo....
                         break;
+                    default :
+                        throw new ArgumentOutOfRangeException();
+                        break;
                 }
             }
         }
