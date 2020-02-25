@@ -1,4 +1,5 @@
 ﻿using System;
+ using Revisao;
 
 namespace SistemaEscolaDIO
 {
@@ -57,7 +58,21 @@ namespace SistemaEscolaDIO
 
                         }
                         var mediaGeral = nt / nrAlunos;
-                        Console.WriteLine($"Media Geral:{mediaGeral}");
+                        Conceito conceitoGeral;
+                        
+                        if(mediaGeral < 2){
+                            conceitoGeral = conceito.E;
+                        } else if(mediaGeral < 4){
+                            conceitoGeral = conceito.D;
+                        } else if(mediaGeral < 6){
+                            conceitoGeral = conceito.C;
+                        }else if(mediaGeral < 8){
+                            conceitoGeral = conceito.B;
+                        }else{
+                            conceitoGeral = conceito.A;
+                        }
+                        
+                        Console.WriteLine($"Media Geral:{mediaGeral} - Conceito: {conceitoGeral}");
 
                         break;
                     case "4":
