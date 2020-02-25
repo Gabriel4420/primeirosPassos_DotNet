@@ -1,5 +1,5 @@
 ﻿using System;
- using Revisao;
+using Revisao;
 
 namespace SistemaEscolaDIO
 {
